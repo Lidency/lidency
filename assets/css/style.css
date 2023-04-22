@@ -1005,7 +1005,7 @@ textarea.input-field {
    .entity-card { padding: 20px; }
 
    .entity-card .h3 { --fs-3: 2.3rem; }
- 
+
 
   /**
    * SERVICES
@@ -1180,4 +1180,47 @@ textarea.input-field {
 
   .contact-card .card-icon { padding: 15px; }
 
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+
+  /*transition: opacity 1s ease-in-out;*/
+  transition: all .6s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+/*.lids {*/
+/*  display: flex;*/
+/*}*/
+
+.lid:nth-child(2) {
+  transition-delay: 200ms;
+}
+.lid:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.lid:nth-child(4) {
+    transition-delay: 600ms;
+}
+.lid:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.lid:nth-child(6) {
+    transition-delay: 1000ms;
 }
